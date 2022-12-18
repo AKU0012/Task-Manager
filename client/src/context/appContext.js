@@ -80,7 +80,7 @@ const AppProvider = ({ children }) => {
     const signUpUser = async (currentUser) => {
         dispatch({ type: REGISTER_USER_BEGIN })
 
-        await fetch("http://localhost:4000/api/v1/auth/register", {
+        await fetch("https://task-manager-jw8c.onrender.com/api/v1/auth/register", {
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json'
@@ -116,7 +116,7 @@ const AppProvider = ({ children }) => {
     const loginUser = async (currentUser) => {
         dispatch({ type: LOGIN_USER_BEGIN })
 
-        await fetch("http://localhost:4000/api/v1/auth/login", {
+        await fetch("https://task-manager-jw8c.onrender.com/api/v1/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -170,7 +170,7 @@ const AppProvider = ({ children }) => {
 
     const createTask = async(currentTask)=>{
         dispatch({type: CREATE_TASK_BEGIN})
-        await fetch("http://localhost:4000/api/v1/tasks/", {
+        await fetch("https://task-manager-jw8c.onrender.com/api/v1/tasks/", {
             method: "POST",
             headers:{
                 "Content-Type": "application/json",
@@ -196,12 +196,13 @@ const AppProvider = ({ children }) => {
             })
         })
         clearAlert()
+        getTasks()
     }
 
 //==========================Get All Tasks=======================//
     const getTasks = async()=>{
         dispatch({type: GET_TASKS_BEGIN})
-        await fetch("http://localhost:4000/api/v1/tasks/",{
+        await fetch("https://task-manager-jw8c.onrender.com/api/v1/tasks/",{
             method: "GET",
             headers:{
                 "Content-Type": "application/json",
@@ -239,7 +240,7 @@ const AppProvider = ({ children }) => {
 
     const updateTask = async (currentTask)=>{
         dispatch({type: UPDATE_TASK_BEGIN})
-        await fetch(`http://localhost:4000/api/v1/tasks/${state.taskId}`,{
+        await fetch(`https://task-manager-jw8c.onrender.com/api/v1/tasks/${state.taskId}`,{
             method: "PATCH",
             headers:{
                 "Content-Type": "application/json",
@@ -264,11 +265,12 @@ const AppProvider = ({ children }) => {
             })
         })
         clearAlert();
+        getTasks()
     } 
 //=========================================DELETE TASK==========================//
     const deleteTask = async(id)=>{
         dispatch({type: DELETE_TASK_BEGIN})
-        await fetch(`http://localhost:4000/api/v1/tasks/${id}`,{
+        await fetch(`https://task-manager-jw8c.onrender.com/api/v1/tasks/${id}`,{
             method:"DELETE",
             headers:{
                 "Content-Type": "application/json",

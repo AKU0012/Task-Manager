@@ -23,7 +23,7 @@ app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/tasks',authenticator, tasksRouter)
 
 app.use(notFoundMiddleware)
-app.use(errorHandlerMiddleware)
+app.use(errorHandlerMiddleware) 
 
 const port = process.env.PORT
 const start = async()=>{

@@ -2,7 +2,9 @@ import React from 'react'
 
 const Loading = () => {
   return (
-    <div>Loading</div>
+    <div style={{"fontSize":"35px"}} className='flex justify-center'>
+      Loading...
+    </div>
   )
 }
 
