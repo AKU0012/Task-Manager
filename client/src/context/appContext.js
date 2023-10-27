@@ -80,7 +80,7 @@ const AppProvider = ({ children }) => {
     const signUpUser = async (currentUser) => {
         dispatch({ type: REGISTER_USER_BEGIN })
 
-        await fetch("https://task-manager-jw8c.onrender.com/api/v1/auth/register", {
+        await fetch("<YOUR_BACKEND_URL>", {
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json'
