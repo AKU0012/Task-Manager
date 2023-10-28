@@ -20,7 +20,7 @@ To use this application, follow these steps:
 
 2. Navigate to the project directory and install the necessary dependencies using `npm install` for both the frontend and backend.
 
-3. Configure the MongoDB database connection in the backend by providing your connection string in a `.env` file.
+3. Configure the MongoDB database connection in the backend by providing your connection string in a `.env` file (refer .env.example).
 
 4. Run the frontend and backend servers using `npm start` in the server directory.
 
